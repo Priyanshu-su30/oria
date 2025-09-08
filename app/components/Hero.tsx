@@ -237,5 +237,4 @@ export default function Hero() {
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 sm:h-60 md:h-80 lg:h-72 bg-gradient-to-b from-transparent via-white/70 to-white"></div>
     </section>
-  );
-}
+)}

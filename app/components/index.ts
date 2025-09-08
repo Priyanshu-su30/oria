@@ -2,6 +2,7 @@ export { default as AIPowered } from './AIPowered';
 export { default as Blog } from './Blog';
 export { default as Button } from './Button';
 export { default as Contact } from './Contact';
+export { Container } from './Container';
 export { default as EarlyAccess } from './EarlyAccess';
 export { default as FAQ } from './FAQ';
 export { default as Footer } from './Footer';

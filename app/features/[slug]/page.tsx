@@ -26,20 +26,5 @@ export default function FeaturePage({ params }: PageProps) {
         </div>
       </div>
     </div>
-
-interface Params {
-  params: { slug: string };
-}
-
-export default function FeatureDetail({ params }: Params) {
-  const { slug } = params;
-  return (
-    <main className="min-h-[60vh] flex items-center justify-center">
-      <div className="text-center p-8 rounded-2xl border border-gray-200 shadow-sm">
-        <h1 className="text-3xl font-bold mb-2">Feature: {slug}</h1>
-        <p className="text-gray-600">Coming soon</p>
-      </div>
-    </main>
-
   );
 }

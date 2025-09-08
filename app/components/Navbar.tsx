@@ -34,7 +34,6 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    const sections = navbarContent.navigation.map((n) => document.querySelector(n.href) as HTMLElement | null);
     const handler = () => {
       let current = "#hero";
       for (const nav of navbarContent.navigation) {
@@ -110,8 +109,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               href={navbarContent.cta.href}
-
-              className="text-white text-sm font-medium transition-colors duration-200"
+              className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               style={{
                 width: '140px',
                 height: '46px',
@@ -125,10 +123,7 @@ export default function Navbar() {
                 justifyContent: 'center',
                 textDecoration: 'none'
               }}
-
               onClick={(e) => smoothScroll(e, navbarContent.cta.href)}
-              className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-
             >
               {navbarContent.cta.text}
             </Link>

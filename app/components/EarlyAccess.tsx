@@ -42,20 +42,19 @@ export default function EarlyAccess() {
         />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-2 sm:px-3 md:px-4 lg:px-6 py-2 sm:py-3 md:py-4 lg:py-6">
-                 <div className="relative mt-[-50px] mx-auto max-w-4xl bg-white rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] px-2 sm:px-2 md:px-8 lg:px-2 xl:px-2 py-4 sm:py-6 md:py-8 lg:py-6 overflow-hidden ">
+      <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-3 md:px-4 lg:px-12 ">
 
           <div className="absolute inset-0 rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[22px] pointer-events-none"></div>
 
           <div className="absolute bottom-0 left-0 w-[15%] h-[15%] bg-white pointer-events-none"></div>
 
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center">
-              <div className="relative mr-0 sm:mr-4 md:mr-6 lg:mr-8" style={{ marginTop: "-20px" }}>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-tight " >
+            <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center">
+            <div className="relative mr-0 sm:mr-4 md:mr-6 lg:mr-8" style={{ marginTop: "-20px" }}>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-extrabold leading-tight tracking-tighter transform scale-x-110 origin-left">
                 <span className="text-gray-900 block">
                   {earlyAccessContent.title.line1}
                 </span>
-                <span className="text-[#484AF6] block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+                <span className="text-[#484AF6] block">
                   {earlyAccessContent.title.line2}
                 </span>
               </h2>
@@ -99,7 +98,7 @@ export default function EarlyAccess() {
           </div>
         </div>
 
-        <div className="relative mx-2 sm:mx-4 md:mx-6 lg:mx-8 max-w-6xl mt-4 sm:mt-6 md:mt-8 lg:mt-10">
+        <div className="relative mx-2 sm:mx-4 md:mx-6 lg:mx-8 max-w-3xl mt-4 sm:mt-6 md:mt-8 lg:mt-10">
           
           <div className="relative overflow-hidden">
             <div className="pointer-events-none absolute left-0 top-0 h-full w-16 sm:w-24 md:w-32 lg:w-40 bg-gradient-to-r from-gray-50 to-transparent z-10" />
@@ -125,7 +124,6 @@ export default function EarlyAccess() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }

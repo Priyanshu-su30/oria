@@ -81,8 +81,8 @@ export default function Hero() {
   }, [targetTime]);
 
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden pb-0 ">
-             <div className="absolute inset-0" style={{ marginTop: "30px" }}>
+    <section id="hero" className="relative min-h-screen pb-0 ">
+             <div className="absolute inset-0 mt-5 " >
                    <Image
             src={heroContent.background.pattern}
             alt="Background pattern"
@@ -141,49 +141,50 @@ export default function Hero() {
               {/* Blue Frame Lines - Top horizontal line */}
               <span
                 aria-hidden
-                className="absolute left-[-40px] sm:left-[-60px] md:left-[-80px] lg:left-[-100px] right-[-40px] sm:right-[-60px] md:right-[-80px] lg:right-[-100px] top-[-20px] sm:top-[-30px] md:top-[-40px] lg:top-[-50px] h-[2px] sm:h-[3px] md:h-[4px] bg-white"
+                className="absolute left-[-40px] sm:left-[-60px] md:left-[-80px] lg:left-[-100px] right-[-40px] sm:right-[-60px] md:right-[-80px] lg:right-[-100px] top-[-20px] sm:top-[-30px] md:top-[-40px] lg:top-[-50px] h-[2px] sm:h-[3px] md:h-[3px] bg-white"
               ></span>
 
               {/* Blue Frame Lines - Bottom horizontal line */}
               <span
                 aria-hidden
-                className="absolute left-[-40px] sm:left-[-60px] md:left-[-80px] lg:left-[-100px] right-[-40px] sm:right-[-60px] md:right-[-80px] lg:right-[-100px] bottom-[-30px] sm:bottom-[-40px] md:bottom-[-50px] lg:bottom-[-60px] h-[2px] sm:h-[3px] md:h-[4px] bg-white"
+                className="absolute left-[-40px] sm:left-[-60px] md:left-[-80px] lg:left-[-100px] right-[-40px] sm:right-[-60px] md:right-[-80px] lg:right-[-100px] bottom-[-30px] sm:bottom-[-40px] md:bottom-[-50px] lg:bottom-[-60px] h-[2px] sm:h-[3px] md:h-[3px] bg-white"
               ></span>
 
               {/* Blue Frame Lines - Left vertical line */}
               <span
                 aria-hidden
-                className="absolute left-[-40px] sm:left-[-60px] md:left-[-80px] lg:left-[-100px] top-[-10px] sm:top-[-15px] md:top-[-20px] lg:top-[-25px] bottom-[-30px] sm:bottom-[-40px] md:bottom-[-50px] lg:bottom-[-60px] w-[2px] sm:w-[3px] md:w-[4px] bg-white"
+                className="absolute left-[-40px] sm:left-[-60px] md:left-[-80px] lg:left-[-100px] top-[-10px] sm:top-[-15px] md:top-[-20px] lg:top-[-25px] bottom-[-30px] sm:bottom-[-40px] md:bottom-[-50px] lg:bottom-[-60px] w-[2px] sm:w-[3px] md:w-[3px] bg-white"
               ></span>
 
               {/* Blue Frame Lines - Right vertical line */}
               <span
                 aria-hidden
-                className="absolute right-[-40px] sm:right-[-60px] md:right-[-80px] lg:right-[-100px] top-[-10px] sm:top-[-15px] md:top-[-20px] lg:top-[-25px] bottom-[-30px] sm:bottom-[-40px] md:bottom-[-50px] lg:bottom-[-60px] w-[2px] sm:w-[3px] md:w-[4px] bg-white"
+                className="absolute right-[-40px] sm:right-[-60px] md:right-[-80px] lg:right-[-100px] top-[-10px] sm:top-[-15px] md:top-[-20px] lg:top-[-25px] bottom-[-30px] sm:bottom-[-40px] md:bottom-[-50px] lg:bottom-[-60px] w-[2px] sm:w-[3px] md:w-[3px] bg-white"
               ></span>
 
               {/* Corner markers - Top left */}
-              <span
-                aria-hidden
-                className="absolute left-[-50px] sm:left-[-70px] md:left-[-90px] lg:left-[-110px] top-[-25px] sm:top-[-35px] md:top-[-45px] lg:top-[-55px] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 bg-[#484AF6] rounded-sm"
-              ></span>
+              
+                <span
+                  aria-hidden
+                  className="absolute left-[-50px] sm:left-[-70px] md:left-[-90px] lg:left-[-110px] top-[-25px] sm:top-[-35px] md:top-[-45px] lg:top-[-55px] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 bg-[#484AF6]"
+                ></span>
 
               {/* Corner markers - Top right */}
               <span
                 aria-hidden
-                className="absolute right-[-50px] sm:right-[-70px] md:right-[-90px] lg:right-[-110px] top-[-25px] sm:top-[-35px] md:top-[-45px] lg:top-[-55px] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 bg-[#484AF6] rounded-sm"
+                className="absolute right-[-50px] sm:right-[-70px] md:right-[-90px] lg:right-[-110px] top-[-25px] sm:top-[-35px] md:top-[-45px] lg:top-[-55px] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 bg-[#484AF6]"
               ></span>
 
               {/* Corner markers - Bottom left */}
               <span
                 aria-hidden
-                className="absolute left-[-50px] sm:left-[-70px] md:left-[-90px] lg:left-[-110px] bottom-[-40px] sm:bottom-[-50px] md:bottom-[-60px] lg:bottom-[-70px] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 bg-[#484AF6] rounded-sm"
+                className="absolute left-[-50px] sm:left-[-70px] md:left-[-90px] lg:left-[-110px] bottom-[-40px] sm:bottom-[-50px] md:bottom-[-60px] lg:bottom-[-70px] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 bg-[#484AF6]"
               ></span>
 
               {/* Corner markers - Bottom right */}
               <span
                 aria-hidden
-                className="absolute right-[-50px] sm:right-[-70px] md:right-[-90px] lg:right-[-110px] bottom-[-40px] sm:bottom-[-50px] md:bottom-[-60px] lg:bottom-[-70px] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 bg-[#484AF6] rounded-sm"
+                className="absolute right-[-50px] sm:right-[-70px] md:right-[-90px] lg:right-[-110px] bottom-[-40px] sm:bottom-[-50px] md:bottom-[-60px] lg:bottom-[-70px] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 bg-[#484AF6]"
               ></span>
             </div>
           </div>
@@ -195,11 +196,11 @@ export default function Hero() {
               alt={heroContent.smartphone.alt}
               width={heroContent.smartphone.width}
               height={heroContent.smartphone.height}
-              className="w-64 sm:w-80 md:w-96 lg:w-[600px] xl:w-[800px] 2xl:w-[1047px] h-auto"
+              className="w-64 sm:w-80 md:w-96 lg:w-[800px] xl:w-[1000px] 2xl:w-[1247px] h-auto"
               priority
             />
 
-            <div className="hidden md:block mt-20 mr-60 absolute top-4 sm:top-6 md:top-8 lg:top-10 right-[-180px] sm:right-[-240px] md:right-[-300px] lg:right-[-360px] bg-white/10 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
+            <div className="hidden md:block mt-20 mr-85 absolute top-32 sm:top-36 md:top-40 lg:top-42 right-[-180px] sm:right-[-240px] md:right-[-300px] lg:right-[-360px] bg-white/10 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg ">
               <div className="text-white/80 text-xs sm:text-sm mb-2 sm:mb-3 text-center">
                 Coming Soon
               </div>
@@ -213,23 +214,20 @@ export default function Hero() {
           </div>
 
           <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8">
-            <Button
-              href={heroContent.primaryCTA.href}
-              variant="yellow"
-              size="lg"
-              className="font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg mb-38"
+            <button
+              className="px-8 sm:px-10 py-4 sm:py-6 rounded-xl text-3xl mb-38 bg-yellow-400 text-black"
             >
               {heroContent.primaryCTA.text}
-            </Button>
+            </button>
           </div>
 
-          <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 lg:-bottom-10 right-0 sm:right-2 md:right-4 lg:right-6 z-10 pointer-events-none">
+          <div className="absolute -bottom-0 sm:-bottom-2 md:-bottom-4 lg:-bottom-6 right-0 sm:right-2 md:right-4 lg:right-6 z-50 pointer-events-none">
             <Image
               src={heroContent.arrow.src}
               alt={heroContent.arrow.alt}
               width={heroContent.arrow.width}
               height={heroContent.arrow.height}
-              className="w-[150px] mr-[150px] sm:w-[180px] md:w-[220px] lg:w-[280px] xl:w-[320px] 2xl:w-[360px] h-auto rotate-[-10deg] drop-shadow-[0_8px_24px_rgba(0,0,0,0.4)]"
+              className="w-[100px] mr-[50px] sm:w-[140px] md:w-[190px] lg:w-[260px] xl:w-[310px] 2xl:w-[360px] h-auto rotate-[20deg] drop-shadow-[0_8px_24px_rgba(0,0,0,0.4)]"
             />
           </div>
         </div>

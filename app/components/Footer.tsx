@@ -79,7 +79,7 @@ const footerContent = {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-white py-20 overflow-hidden">
+    <footer className="relative bg-black text-white py-28 overflow-hidden">
       <div className="absolute inset-0 z-0 -top-60">
         <Image
           src="/Images/Group.png"
@@ -89,8 +89,8 @@ export default function Footer() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-14 lg:gap-16">
           <div className="space-y-6 sm:space-y-8">
             {/* Logo */}
             <div className="flex items-center space-x-2 sm:space-x-3">
@@ -121,7 +121,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-lg sm:text-xl font-semibold text-white">
+            <h3 className="text-xl sm:text-2xl text-white">
               {footerContent.navigation.navigation.title}
             </h3>
             <ul className="space-y-2 sm:space-y-3">
@@ -129,7 +129,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base"
+                    className="text-gray-300 hover:text-white transition-colors text-lg sm:text-2xl"
                   >
                     {link.name}
                   </a>
@@ -139,7 +139,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-lg sm:text-xl font-semibold text-white">
+            <h3 className="text-xl sm:text-2xl text-white">
               {footerContent.navigation.product.title}
             </h3>
             <ul className="space-y-2 sm:space-y-3">
@@ -147,7 +147,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base"
+                    className="text-gray-300 hover:text-white transition-colors text-lg sm:text-2xl"
                   >
                     {link.name}
                   </a>
@@ -157,7 +157,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-lg sm:text-xl font-semibold text-white">
+            <h3 className="text-xl sm:text-2xl text-white">
               {footerContent.navigation.support.title}
             </h3>
             <ul className="space-y-2 sm:space-y-3">
@@ -165,7 +165,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base"
+                    className="text-gray-300 hover:text-white transition-colors text-lg sm:text-2xl"
                   >
                     {link.name}
                   </a>
@@ -173,24 +173,24 @@ export default function Footer() {
               ))}
             </ul>
 
-            <div className="flex space-x-4 pt-4">
-              {footerContent.social.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="w-12 h-12 bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
-                >
-                  <Image
-                    src={social.src}
-                    alt={social.alt}
-                    width={24}
-                    height={24}
-                    className="w-6 h-6"
-                  />
-                </a>
-              ))}
-            </div>
           </div>
+        </div>
+        <div className="flex justify-end space-x-4">
+          {footerContent.social.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              className="w-12 h-12 bg-white rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+            >
+              <Image
+                src={social.src}
+                alt={social.alt}
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+            </a>
+          ))}
         </div>
       </div>
     </footer>

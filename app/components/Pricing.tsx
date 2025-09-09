@@ -91,8 +91,8 @@ export default function Pricing() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col mb-16">
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="flex flex-col mb-10">
           <div className="mb-8">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
               <span className="text-gray-900">
@@ -111,10 +111,10 @@ export default function Pricing() {
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0">
             <div className="flex-1"></div>
 
-            <div className="flex items-center    rounded-xl p-1 shadow-md">
+            <div className="text-xl flex items-center border-2 border-black rounded-xl">
               <button
                 onClick={() => setIsPaid(false)}
-                className={`px-6 py-2 rounded-xl font-medium transition-colors ${
+                className={`px-12 py-4 rounded font-medium transition-colors ${
                   !isPaid
                     ? "bg-gray-800 text-white"
                     : "text-gray-700 hover:text-gray-900"
@@ -124,7 +124,7 @@ export default function Pricing() {
               </button>
               <button
                 onClick={() => setIsPaid(true)}
-                className={`px-6 py-2 rounded-xl font-medium transition-colors ${
+                className={`px-12 py-4 rounded font-medium transition-colors ${
                   isPaid
                     ? "bg-gray-800 text-white"
                     : "text-gray-700 hover:text-gray-900"
@@ -174,7 +174,7 @@ export default function Pricing() {
               <div className="relative z-10">
                 <div className="text-center mb-8">
                   <span
-                    className={`inline-block px-6 py-3 rounded-full text-base font-medium ${
+                    className={`inline-block px-6 py-1 rounded-full text-base font-medium ${
                       plan.background === "dark"
                         ? "bg-gray-700 text-white"
                         : "bg-gray-200 text-gray-900"
@@ -206,7 +206,7 @@ export default function Pricing() {
                   </div>
                 </div>
 
-                <div className="flex gap-4 ml-14">
+                <div className="flex justify-around ml-14">
                   {plan.buttons.map((button, index) => (
                     <a
                       key={index}

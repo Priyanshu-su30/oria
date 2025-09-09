@@ -101,12 +101,12 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative py-16 sm:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="relative bg-white pb-25">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           <div className="space-y-6 sm:space-y-8">
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:teimage.pngxt-6xl font-bold ">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:teimage.pngxt-6xl font-bold pb-20">
                 <span className="text-gray-900">{faqContent.title.line1}</span>
                 <span className="text-[#5B42F3]">{faqContent.title.line2}</span>
               </h2>
@@ -159,7 +159,7 @@ export default function FAQ() {
           </div>
 
           <div className="relative">
-            <p className="text-lg text-gray-600 leading-relaxed mb-6 mr-10">
+            <p className="text-lg text-gray-600 text-right leading-relaxed mb-6 mr-10 pl-20 pb-20">
               Find answers to commonly asked questions about our platform,
               features, and services. Can&apos;t find what you&apos;re looking
               for?
@@ -202,13 +202,11 @@ export default function FAQ() {
                             className="w-70 h-12 px-8 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-900 placeholder-gray-500"
                             required
                           />
-                          <Button
-                            type="submit"
-                            size="lg"
-                            className="w-30 bg-gray-800 hover:bg-gray-900 text-white font-bold px-6 py-3 rounded-xl"
+                          <button
+                            className="w-30 bg-gray-800 hover:bg-gray-900 px-2 py-3 text-white rounded-xl"
                           >
                             {faqContent.mobileApp.button.text}
-                          </Button>
+                          </button>
                         </form>
                       </div>
                     </div>
@@ -217,8 +215,8 @@ export default function FAQ() {
               </div>
 
               {/* Countdown box positioned outside the main card */}
-              <div className=" mb-20  mr-10 absolute -bottom-6 -right-6 bg-purple-50 border border-gray-200 rounded-xl p-4 max-w-[200px] shadow-lg z-20">
-                <h4 className="text-sm font-bold text-gray-900 mb-3 text-center">
+              <div className="p-3 mb-20 mr-15 absolute -bottom-6 -right-6 bg-[#ececff] border border-[#c4c5fa] rounded-2xl max-w-[400px] shadow-lg z-20">
+                <h4 className="text-sm text-[#484AF6] mb-3 text-center">
                   {faqContent.mobileApp.countdown.title}
                 </h4>
                 <div className="grid grid-cols-4 gap-2">
@@ -230,7 +228,7 @@ export default function FAQ() {
                   ].map((item) => (
                     <div
                       key={item.label}
-                      className="bg-white border border-blue-300 rounded-lg px-2 py-1 text-center"
+                      className="bg-[#ececff] border border-[#c4c5fa] rounded-lg px-2 py-1 text-center"
                     >
                       <div className="text-lg font-medium text-[#5B42F3]">
                         {String(item.value).padStart(2, "0")}

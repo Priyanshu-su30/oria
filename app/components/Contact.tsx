@@ -103,8 +103,8 @@ export default function Contact() {
       id="contact"
       className="relative py-16 sm:py-24 bg-white overflow-hidden pb-0"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-10">
           {/* Left Column - Contact Form */}
           <div className="space-y-6 sm:space-y-8">
             <div className="space-y-4">
@@ -214,21 +214,21 @@ export default function Contact() {
           </div>
 
           {/* Right Column - Contact Info Card */}
-          <div className="relative mr-10">
+          <div className="relative">
             {/* Background Rectangle Image */}
-            <div className="absolute inset-0">
+            <div className="">
               <Image
                 src="/Images/Rectangle.png"
                 alt="Blue rectangle background"
                 fill
-                className="object-cover rounded-tl-2xl ml-100 "
+                className="rounded-tl-2xl ml-80 z-0"
               />
             </div>
             
             {/* Contact Info Card */}
             <div className="relative mt-78 ">
          
-            <div className="bg-gray-900 w-[561px] ml-20 mr-[-170px] rounded-2xl p-8 lg:p-12 shadow-xl z-10 absolute top-1/2 right-10 transform -translate-y-1/2">
+            <div className="bg-gray-900 w-[650px] ml-20 mr-[-170px] rounded-2xl p-8 lg:p-12 shadow-xl z-10 absolute top-1/2 right-10 transform -translate-y-1/2">
               {/* Top-left decorative element */}
               <div className="absolute -top-4 -left-4 z-20">
                 <Image

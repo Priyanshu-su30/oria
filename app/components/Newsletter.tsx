@@ -49,7 +49,7 @@ export default function Newsletter() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           {/* Left side content */}
-          <div className="absolute left-0 top-0 w-full sm:w-1/2 text-white px-2 sm:px-8 md:px-12 py-4 sm:py-8">
+          <div className="absolute left-0 top-0 w-full sm:w-1/2 text-white  py-4 sm:py-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-extralight leading-tight">
               {newsletterContent.title}
             </h2>

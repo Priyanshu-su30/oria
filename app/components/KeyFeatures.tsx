@@ -64,7 +64,7 @@ export default function KeyFeatures() {
   return (
     <section
       id="key-features"
-      className="relative py-12 sm:py-16 md:py-20 lg:py-24 pb-24 sm:pb-32 md:pb-40 lg:pb-48 bg-white"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-30 pb-32 sm:pb-48 md:pb-60 lg:pb-72 bg-white"
     >
       <div className="absolute inset-0">
         <Image
@@ -76,118 +76,97 @@ export default function KeyFeatures() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-10 lg:gap-12 items-center">
-          <div className="space-y-4 sm:space-y-6">
-            <div className="text-[#484AF6] text-xs sm:text-sm font-medium uppercase tracking-wider">
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          
+          <div className="space-y-4 sm:space-y-6 lg:col-span-1">
+            <div className="text-blue-600 text-xs sm:text-sm font-medium uppercase tracking-wider">
               {keyFeaturesContent.header}
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-1">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
                 {keyFeaturesContent.title.line1}
               </h2>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black">
                 {keyFeaturesContent.title.line2}
               </h2>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#484AF6] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600">
                 {keyFeaturesContent.title.line3}
               </h2>
             </div>
 
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-lg">
+            <p className="text-base sm:text-lg text-gray-600 max-w-md">
               {keyFeaturesContent.description}
             </p>
           </div>
 
-          <div className="col-span-1 lg:col-span-2 overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${current * 100}%)` }}
-            >
-              {slides.map((s, idx) => (
-                <div
-                  key={idx}
-                  className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-10 lg:gap-12 items-center shrink-0 w-full"
-                >
-                  <div className="flex justify-center lg:justify-center">
-                    <div className="relative origin-center -mt-2 sm:-mt-4 lg:-mt-6 xl:-mt-8 scale-125 sm:scale-150 md:scale-[1.7] lg:scale-[1.9] xl:scale-[2.05] 2xl:scale-[2.15] pointer-events-none">
-                      <Image
-                        src={s.image}
-                        alt={s.alt}
-                        width={420}
-                        height={840}
-                        className="w-[420px] sm:w-[460px] md:w-[520px] lg:w-[560px] xl:w-[600px] 2xl:w-[640px] h-auto drop-shadow-2xl"
-                        priority
-                      />
-                    </div>
-                  </div>
+          {/* Column 2: Centered Phone Images */}
+          <div className="flex justify-center items-center lg:col-span-1 order-first lg:order-none">
+            <div className="relative scale-125 md:scale-150 lg:scale-[1.8] pointer-events-none -mb-16 lg:mb-0">
+              <Image
+                src={keyFeaturesContent.mobileImage.src}
+                alt={keyFeaturesContent.mobileImage.alt}
+                width={400}
+                height={800}
+                className="w-full h-auto drop-shadow-2xl"
+                priority
+              />
+            </div>
+          </div>
 
-                  <div className="space-y-4 sm:space-y-6">
-                    <div className="w-16 h-16 bg-[#484AF6] rounded-full flex items-center justify-center">
-                      <span className="text-white text-xl sm:text-2xl font-bold">
-                        {keyFeaturesContent.feature.icon}
-                      </span>
-                    </div>
+          <div className="space-y-6 lg:col-span-1">
+            <div className="w-16 h-16 text-gray-100 rounded-full flex items-center justify-center bg-blue-600 text-2xl font-bold">
+              
+              {`((•))`}
+            </div>
 
-                    <div className="space-y-2">
-                      <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${current * 100}%)` }}
+              >
+                {slides.map((s, idx) => (
+                  <div key={idx} className="space-y-4 shrink-0 w-full">
+                    <div className="space-y-1">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
                         {s.title1}
                       </h3>
-                      <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
                         {s.title2}
                       </h3>
                     </div>
-
-                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-lg">
+                    <p className="text-base sm:text-lg text-gray-600 max-w-md">
                       {s.description}
                     </p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+            
+            {/* Navigation Buttons - Restyled and moved here */}
+            <div className="flex items-center gap-4">
+              <button
+                onClick={prev}
+                aria-label="Previous"
+                className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-blue-600 hover:bg-gray-100 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={next}
+                aria-label="Next"
+                className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-blue-600 hover:bg-gray-100 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
-          {/* Fixed navigation below the carousel */}
-          <div className="col-span-1 lg:col-span-3 mt-4 flex justify-center gap-4">
-            <button
-              onClick={prev}
-              aria-label="Previous"
-              className="w-12 h-12 bg-[#484AF6] rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
-            >
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={next}
-              aria-label="Next"
-              className="w-12 h-12 bg-[#484AF6] rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
-            >
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
+
         </div>
       </div>
     </section>

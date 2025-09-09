@@ -28,7 +28,7 @@ export default function AIPowered() {
   return (
     <section className="relative py-16 sm:py-24 overflow-hidden">
       {/* Background image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 top-20">
         <Image
           src="/Images/CTASection.png"
           alt="AI Powered background"
@@ -38,9 +38,9 @@ export default function AIPowered() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-          <div className="space-y-6 sm:space-y-8 text-white">
+      <div className="relative z-10 max-w-[1300px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-10 items-center">
+          <div className="space-y-6 sm:space-y-8 text-white mt-[-200px]">
             <div className="text-[#484AF6] text-sm font-medium uppercase tracking-wider">
               {aiPoweredContent.header}
             </div>
@@ -82,9 +82,9 @@ export default function AIPowered() {
             </div>
           </div>
 
-          <div className="space-y-6 sm:space-y-8 ">
+          <div className="space-y-6 sm:space-y-8 top-12 mt-28">
             <div className="">
-              <p className="text-lg text-black leading-relaxed text-right mr-[80px]">
+              <p className="text-lg text-black leading-relaxed text-right ml-[80px]">
                 {aiPoweredContent.supportingText}
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function AIPowered() {
                 alt={aiPoweredContent.image.alt}
                 width={680}
                 height={520}
-                className="w-full h-auto rounded-2xl object-cover ml-8"
+                className="w-full h-auto rounded-2xl object-cover"
                 priority
               />
             </div>

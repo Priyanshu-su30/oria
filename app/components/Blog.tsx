@@ -62,8 +62,8 @@ export default function Blog() {
   const next = () => setCurrent((c) => (c + 1) % slides.length);
 
   return (
-    <section id="blog" className="relative py-16 sm:py-24 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="blog" className="relative">
+      <div className="max-w-7xl mx-auto mb-20">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8 sm:mb-10 lg:mb-12">
           <div className="space-y-4 sm:space-y-6 lg:flex-1 lg:pr-8 xl:pr-12">
             <div className="text-[#484AF6] text-xs sm:text-sm font-medium uppercase tracking-wider">
@@ -71,20 +71,20 @@ export default function Blog() {
             </div>
 
             <div className="space-y-2 flex gap-3">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">
                 {blogContent.title.line1}
               </h2>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#484AF6]">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#484AF6]">
                 {blogContent.title.line2}
               </h2>
             </div>
 
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
               {blogContent.description}
             </p>
           </div>
 
-          <div className="mt-6 sm:mt-8 lg:mt-0">
+          <div className="mt-6 sm:mt-16 lg:mt-25">
             <Button
               href="/blogs"
               size="lg"
@@ -116,16 +116,54 @@ export default function Blog() {
                       priority
                     />
                   </div>
+                  <div className="relative flex justify-end space-x-4 -mt-20 z-20">
+                    <button
+                      onClick={prev}
+                      className="w-12 h-12 border-2 border-[#484AF6] rounded-full flex items-center justify-center bg-white text-[#484AF6] hover:bg-[#484AF6] hover:text-white transition-colors"
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 19l-7-7 7-7"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={next}
+                      className="w-12 h-12 border-2 border-[#484AF6] rounded-full flex items-center justify-center bg-white text-[#484AF6] hover:bg-[#484AF6] hover:text-white transition-colors"
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-6 mt-20 px-8">
                   <div className="flex justify-start">
-                    <span className="bg-indigo-200 text-indigo-900 px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="bg-[#c0c0fa] text-[#5555f6] px-6 py-2 rounded-full text-md font-medium border border-[#5555f6]">
                       {s.post.category}
                     </span>
                   </div>
 
-                  <div className="flex items-center space-x-6 text-gray-600 text-sm">
+                  <div className="flex items-center space-x-6 text-gray-600 text-md">
                     <div className="flex items-center space-x-2">
                       <svg
                         className="w-4 h-4"
@@ -161,10 +199,10 @@ export default function Blog() {
                     </div>
                   </div>
 
-                  <h3 className="text-3xl sm:text-4xl font-Inter font-bold text-gray-900 leading-tight">
+                  <h3 className="text-xl sm:text-2xl font-Inter font-bold text-gray-900 leading-tight">
                     {s.post.title}
                   </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                  <p className="text-md text-gray-600 leading-relaxed">
                     {s.post.summary}
                   </p>
                   <p className="text-gray-600 font-medium">{s.post.author}</p>
@@ -174,45 +212,9 @@ export default function Blog() {
           </div>
         </div>
 
-        <div className="flex justify-center space-x-4 mt-6">
-          <button
-            onClick={prev}
-            className="w-12 h-12 border-2 border-[#484AF6] rounded-full flex items-center justify-center bg-white text-[#484AF6] hover:bg-[#484AF6] hover:text-white transition-colors"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button
-            onClick={next}
-            className="w-12 h-12 border-2 border-[#484AF6] rounded-full flex items-center justify-center bg-white text-[#484AF6] hover:bg-[#484AF6] hover:text-white transition-colors"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
+        
       </div>
     </section>
+
   );
 }
